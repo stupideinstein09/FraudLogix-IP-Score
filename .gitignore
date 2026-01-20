@@ -1,0 +1,29 @@
+# General
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+package-lock.json
+
+# Python
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Go
+bin/
+
+# Java
+.target/
+*.class
+.idea/
+*.iml
+
+# .NET
+bin/
+obj/
+
+# Ruby
+.bundle/
